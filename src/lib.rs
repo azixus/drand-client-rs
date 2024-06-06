@@ -20,7 +20,7 @@ use thiserror::Error;
 pub struct DrandClient<'a, T: Transport> {
     transport: T,
     base_url: &'a str,
-    chain_info: ChainInfo,
+    pub chain_info: ChainInfo,
 }
 
 /// create a new instance of the client with an HTTP transport for a given `base_url`.
